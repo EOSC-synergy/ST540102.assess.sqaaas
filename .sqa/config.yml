@@ -15,50 +15,50 @@ sqa_criteria:
     repos:
       github.com/profskipulag/ST540102 git:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-violet-hyena.sh
-        container: qc.acc_tacky-viridian-shark
+        - /usr/bin/env sh .sqa/script.droopy-sangria-shark.sh
+        container: qc.acc_scanty-auburn-moose
   QC.Doc:
     repos:
       github.com/profskipulag/ST540102 find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.woozy-maroon-impala.sh
-        container: qc.doc_ugly-rust-lynx
+        - /usr/bin/env sh .sqa/script.slimy-heliotrope-anteater.sh
+        container: qc.doc_snazzy-peach-shark
       github.com/profskipulag/ST540102 git:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-flax-chin.sh
-        container: qc.doc_tacky-bistre-bordeaux
+        - /usr/bin/env sh .sqa/script.muggy-sepia-malamute.sh
+        container: qc.doc_pasty-silver-wasp
       github.com/profskipulag/ST540102 markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.hazy-cinnamon-urchin.sh
-        container: qc.doc_wimpy-wisteria-vulture
+        - /usr/bin/env sh .sqa/script.cranky-rust-centipede.sh
+        container: qc.doc_frumpy-lilac-scorpion
   QC.Lic:
     repos:
       github.com/profskipulag/ST540102 licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-smalt-penguin.sh
-        container: qc.lic_nippy-russet-chicken
+        - /usr/bin/env sh .sqa/script.goopy-cobalt-chipmunk.sh
+        container: qc.lic_seedy-white-rabbit
   QC.Sec:
     repos:
       github.com/profskipulag/ST540102 bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-cinnabar-zorse.sh
-        container: qc.sec_cranky-goldenrod-lynx
+        - /usr/bin/env sh .sqa/script.scanty-carmine-whippet.sh
+        container: qc.sec_sloppy-gamboge-grouse
   QC.Sty:
     repos:
       github.com/profskipulag/ST540102 flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.homey-puce-retriever.sh
-        container: qc.sty_muzzy-cinnamon-kakapo
+        - /usr/bin/env sh .sqa/script.randy-seashell-bullfrog.sh
+        container: qc.sty_dorky-gold-bullfrog
   QC.Uni:
     repos:
       github.com/profskipulag/ST540102 pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.scaly-sapphire-swan.sh
-        container: qc.uni_shabby-white-donkey
+        - /usr/bin/env sh .sqa/script.zippy-grey-shrew.sh
+        container: qc.uni_muggy-ivory-gerbil
   QC.Ver:
     repos:
       github.com/profskipulag/ST540102 get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-apricot-cuttlefish.sh
-        container: qc.ver_woozy-saffron-bison
+        - /usr/bin/env sh .sqa/script.sickly-saffron-elephant.sh
+        container: qc.ver_geeky-magnolia-bee
 timeout: 5400
