@@ -1,0 +1,64 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/profskipulag/ST540102:
+      branch: main
+      repo: https://github.com/profskipulag/ST540102
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/profskipulag/ST540102 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.frumpy-violet-hyena.sh
+        container: qc.acc_tacky-viridian-shark
+  QC.Doc:
+    repos:
+      github.com/profskipulag/ST540102 find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.woozy-maroon-impala.sh
+        container: qc.doc_ugly-rust-lynx
+      github.com/profskipulag/ST540102 git:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleazy-flax-chin.sh
+        container: qc.doc_tacky-bistre-bordeaux
+      github.com/profskipulag/ST540102 markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.hazy-cinnamon-urchin.sh
+        container: qc.doc_wimpy-wisteria-vulture
+  QC.Lic:
+    repos:
+      github.com/profskipulag/ST540102 licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.randy-smalt-penguin.sh
+        container: qc.lic_nippy-russet-chicken
+  QC.Sec:
+    repos:
+      github.com/profskipulag/ST540102 bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.gloppy-cinnabar-zorse.sh
+        container: qc.sec_cranky-goldenrod-lynx
+  QC.Sty:
+    repos:
+      github.com/profskipulag/ST540102 flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.homey-puce-retriever.sh
+        container: qc.sty_muzzy-cinnamon-kakapo
+  QC.Uni:
+    repos:
+      github.com/profskipulag/ST540102 pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.scaly-sapphire-swan.sh
+        container: qc.uni_shabby-white-donkey
+  QC.Ver:
+    repos:
+      github.com/profskipulag/ST540102 get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.gloppy-apricot-cuttlefish.sh
+        container: qc.ver_woozy-saffron-bison
+timeout: 5400
